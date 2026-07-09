@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banque d'Épreuves - Niveau 3ème</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #eab308;
+            --text-color: #333;
+            --bg-color: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        .subject-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        .subject-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .subject-body {
+            padding: 20px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 15px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #64748b;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: -2px;
+        }
+        .tab-content {
+            display: none;
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 6px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-size: 0.95rem;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .btn-download {
+            background-color: var(--secondary-color);
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+        pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 Bibliothèque de Révision - Classe de 3ème</h1>
+    <p style="text-align: center; color: #64748b;">Accédez directement aux sujets d'examens blancs et à leurs corrigés conformes aux programmes.</p>
+
+    <!-- MATIERE : ESPAGNOL -->
+    <div class="subject-card">
+        <div class="subject-header">
+            <span>🇪🇸 ESPAGNOL - Examen Blanc N°1 (2019-2020)</span>
+            <span style="font-size: 0.9rem; background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">Collège La Prunelle de Dieu</span>
+        </div>
+        <div class="subject-body">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'esp-epreuve')">📝 Épreuve</button>
+                <button class="tab-btn" onclick="openTab(event, 'esp-corrige')">✔️ Corrigé Indicatif</button>
+            </div>
+            
+            <div id="esp-epreuve" class="tab-content active">
+                <pre><strong>Sujet : Hugo tiene manos de plata</strong>
+El boletín de notas que mi hermano llevaba a casa cada mes sacaba a mi padre de quicio.
+¡Otro cero en lengua… ! ¡Y un dos en matemáticas ! ¿Pero cómo es posible ?
+¡Ni haciéndolo expresamente se secan notas tan bajas ! ¡Qué desastre !
+Mi madre intervenía conciliadora :
+A lo mejor Hugo no quiere hacer una carrera… No todos han de ser médicos o abogados. ¡Dios nos libre ! ¡Los libros no le llaman y, en cambio, tiene unas manos de plata...
+
+<strong>A- Muestra que comprendes el texto</strong>
+1. Elige la respuesta conveniente:
+a- Este texto es : (a-1. un relato dialogado / a-2. un poema)
+b- El texto trata de : (b-1. las aptitudes naturales / b-2. la prostitución)
+2. Encuentra una expresión sinónima de "traía a casa" y antónima de "cara alegre".</pre>
+            </div>
+            
+            <div id="esp-corrige" class="tab-content">
+                <pre><strong>Directives de correction :</strong>
+1. Choix multiples :
+a) a-1. un relato dialogado
+b) b-1. las aptitudes naturales
+
+2. Vocabulaire :
+a) Sinónimo de "traía a casa" : "llevaba a casa".
+b) Antónimo de "cara alegre" : "cara triste".
+
+3. Réponses aux questions :
+a) Los resultados de Hugo son muy malos (un cero en lengua y un dos en matemáticas).
+b) Hugo quiere hacerse mecánico o radiotelegrafista porque no sirve para estudiar y tiene unas manos de plata (aptitudes manuales).</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- MATIERE : MATHEMATIQUES -->
+    <div class="subject-card">
+        <div class="subject-header">
+            <span>📐 MATHÉMATIQUES - 1er Devoir du 2ème Semestre</span>
+            <span style="font-size: 0.9rem; background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">Zone Parakou-Tchaourou</span>
+        </div>
+        <div class="subject-body">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'math-epreuve')">📝 Épreuve</button>
+                <button class="tab-btn" onclick="openTab(event, 'math-corrige')">✔️ Corrigé Officiel</button>
+            </div>
+            
+            <div id="math-epreuve" class="tab-content active">
+                <pre><strong>Contexte : La classe à la battue.</strong>
+Positions des chasseurs : A(2;4), B(3;6), C(4;4), D(3;2), E(2;8) et F(5;2).
+Forêt classée définie par le système (S) : 2x + y - 12 > 0 et 2x - y - 4 > 0.
+
+<strong>Problème 1 :</strong>
+1) Place les points dans un repère orthonormé (O, I, J).
+2) a- Détermine une équation cartésienne de la droite (BC) représentant la ligne rouge.
+   b- Justifie si E et F sont sur cette ligne.
+3) Résous graphiquement le système (S).</pre>
+            </div>
+            
+            <div id="math-corrige" class="tab-content">
+                <pre><strong>Éléments de réponse officiels :</strong>
+1) Repère (O, I, J) avec (OI) ⊥ (OJ) et OI = OJ.
+2) a- Équation de (BC) :
+   Coeff directeur a' = (yC - yB) / (xC - xB) = (4 - 6) / (4 - 3) = -2.
+   b' = yB - a'xB = 6 - (-2)(3) = 12.
+   D'où (BC) : y = -2x + 12 => <strong>2x + y - 12 = 0</strong>.
+b- Pour E(2;8) : 2(2) + 8 - 12 = 0 (Vrai). Pour F(5;2) : 2(5) + 2 - 12 = 0 (Vrai). Les deux sont sur la ligne rouge.
+3) b- Non, il n'y a pas de chasseur dans la forêt classée (zone non hachurée).</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- MATIERE : SVT -->
+    <div class="subject-card">
+        <div class="subject-header">
+            <span>🧬 SVT - Évaluation Sommative (1er Semestre)</span>
+            <span style="font-size: 0.9rem; background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px;">CEG Albarika - Parakou</span>
+        </div>
+        <div class="subject-body">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'svt-epreuve')">📝 Épreuve</button>
+                <button class="tab-btn" onclick="openTab(event, 'svt-corrige')">✔️ Corrigé Officiel</button>
+            </div>
+            
+            <div id="svt-epreuve" class="tab-content active">
+                <pre><strong>Partie I : Restitution organisée de connaissances (06 points)</strong>
+Explique en quoi la digestion, la respiration et la circulation sanguine se complètent dans la production de l'énergie cellulaire indispensable au fonctionnement de notre organisme.
+
+<strong>Partie II : Résolution de problèmes (12 points)</strong>
+Patient souffrant de difficultés urinaires.
+Document 1 & 2 : Présence anormale de protéines dans l'urine du patient (5 g/l au lieu de 0 g/l chez un sujet sain).
+Document 3 : Lésions touchant 85% des néphrons chez le patient.</pre>
+            </div>
+            
+            <div id="svt-corrige" class="tab-content">
+                <pre><strong>Synthèse du corrigé type :</strong>
+<strong>Partie I :</strong>
+- La digestion fournit les nutriments transférés dans le sang via l'absorption.
+- La respiration apporte le dioxygène ($O_2$) au sang et élimine le $CO_2$.
+- La circulation transporte ces intrants vers les cellules.
+- Au niveau cellulaire, les nutriments sont dégradés en présence d' $O_2$ pour libérer l'énergie vitale.
+
+<strong>Partie II :</strong>
+Le patient souffre d'une <strong>protéinurie</strong> due à une <strong>insuffisance rénale chronique</strong>. L'origine vient du fait que 85% de ses néphrons sont lésés (au-delà du seuil critique de 80%). Les 15% restants ne suffisent plus à réabsorber la totalité des protéines filtrées.</pre>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    var card = evt.currentTarget.closest('.subject-body');
+    
+    tabcontent = card.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    tablinks = card.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+                                                                </html>
+                                                                
